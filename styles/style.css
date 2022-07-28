@@ -96,6 +96,23 @@ padding-top: 40px;
   margin: 0 13px 3px 0;
 }
 
+.shift-arrow {
+  background-image: url("../images/shifted-arrow.svg");
+  background-color: #BABEC8;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  display: inline-block;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.change-sort-direction {
+  transform: rotate(180deg);
+}
+
 /* .separator {
   border-left: 1.5px solid #E1E1E1;
 } */

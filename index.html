@@ -26,125 +26,18 @@
       <img src="images/card.svg" alt="client's card">
       <div class="add-new-card"><img src="images/plus.svg" alt="plus"><span>Add new Card</span></div>
       <p class="titles">Transactions</p>
-      <!-- <table> 
-        <thead>
-        <tr>
-          <th scope="col">&nbsp;</th>
-          <th colspan="2" scope="col">Name</th>
-          <th colspan="2">User Credentials</th>
-          <th scope="col">Last transaction</th>
-          <th scope="col">Status</th>
-          <th scope="col">End date</th>
-          <th scope="col">Total used</th>
-          <th scope="col">&nbsp;</th>
-        </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td scope="rowgroup" rowspan="2"><input type="checkbox" id="1" name="1"></td>
-            <td scope="rowgroup" rowspan="2"><img src="images/figma.png" alt="figma"></td>
-            <td>Figma</td>
-            <td>Visa</td>
-            <td>Itai Bracha</td>
-            <td>Jan 2, 2022</td>
-            <td scope="rowgroup" rowspan="2" class="done">Done</td>
-            <td scope="rowgroup" rowspan="2">Jan 2, 2022</td>
-            <td scope="rowgroup" rowspan="2">$783.22</td>
-            <td scope="rowgroup" rowspan="2"><div class="elipsis"></div></td>
-          </tr>
-          <tr>
-          <td class="second-row">https://www.figma.com/</td>
-          <td class="second-row">***** 2468</td>
-          <td class="second-row">Itai Bracha31@gmail.com</td>
-          <td class="second-row">$783.22</td>
-        </tr>
-          <tr>
-            <td scope="rowgroup" rowspan="2"><input type="checkbox" id="2" name="2"></td>
-            <td scope="rowgroup" rowspan="2"><img src="images/xd.png" alt="xd"></td>
-            <td>Adobe XD</td>
-            <td>Visa</td>
-            <td>Itai Bracha</td>
-            <td>Jan 2, 2022</td>
-            <td scope="rowgroup" rowspan="2" class="done">Done</td>
-            <td scope="rowgroup" rowspan="2">Jan 2, 2022</td>
-            <td scope="rowgroup" rowspan="2">$783.22</td>
-          <td scope="rowgroup" rowspan="2"><div class="elipsis"></div></td>
-          </tr>
-        <tr>
-          <td class="second-row">https://www.adobe.com/</td>
-          <td class="second-row">***** 2468</td>
-          <td class="second-row">Itai Bracha31@gmail.com</td>
-          <td class="second-row">$783.22</td>
-        </tr>
-          <tr>
-            <td scope="rowgroup" rowspan="2"><input type="checkbox" id="3" name="3"></td>
-            <td scope="rowgroup" rowspan="2"><img src="images/mailchimp.png" alt="mailchimp"></td>
-            <td>Mailchimp</td>
-            <td>Visa</td>
-            <td>Itai Bracha</td>
-            <td>Jan 2, 2022</td>
-            <td scope="rowgroup" rowspan="2" class="done">Done</td>
-            <td scope="rowgroup" rowspan="2">Jan 2, 2022</td>
-          <td scope="rowgroup" rowspan="2">$783.22</td>
-          <td scope="rowgroup" rowspan="2"><div class="elipsis"></div></td>
-        <tr>
-          <td class="second-row">https://mailchimp.com/</td>
-          <td class="second-row">***** 2468</td>
-          <td class="second-row">Itai Bracha31@gmail.com</td>
-          <td class="second-row">$783.22</td>
-        </tr>
-          <tr>
-            <td scope="rowgroup" rowspan="2"><input type="checkbox" id="4" name="4"></td>
-            <td scope="rowgroup" rowspan="2"><img src="images/x.png" alt="x"></td>
-            <td>WIX</td>
-            <td>Visa</td>
-            <td>Itai Bracha</td>
-            <td>Jan 2, 2022</td>
-            <td scope="rowgroup" rowspan="2" class="pending">Pending</td>
-            <td scope="rowgroup" rowspan="2">Jan 2, 2022</td>
-          <td scope="rowgroup" rowspan="2">$783.22</td>
-          <td scope="rowgroup" rowspan="2"><div class="elipsis"></div></td>
-        <tr>
-          <td class="second-row">https://www.wix.com/</td>
-          <td class="second-row">***** 2468</td>
-          <td class="second-row">Itai Bracha31@gmail.com</td>
-          <td class="second-row">$783.22</td>
-        </tr>
-          <tr>
-            <td scope="rowgroup" rowspan="2"><input type="checkbox" id="5" name="5"></td>
-            <td scope="rowgroup" rowspan="2"><img src="images/youtube.png" alt="youtube"></td>
-            <td>Youtube</td>
-            <td>Visa</td>
-            <td>Itai Bracha</td>
-            <td>Jan 2, 2022</td>
-            <td scope="rowgroup" rowspan="2" class="done">Done</td>
-            <td scope="rowgroup" rowspan="2">Jan 2, 2022</td>
-          <td scope="rowgroup" rowspan="2">$783.22</td>
-          <td scope="rowgroup" rowspan="2"><div class="elipsis"></div></td>
-        <tr>
-          <td class="second-row">https://www.youtube.com/</td>
-          <td class="second-row">***** 2468</td>
-          <td class="second-row">Itai Bracha31@gmail.com</td>
-          <td class="second-row">$783.22</td>
-        </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-            <td scope="row" colspan="10">
-    <div class="pagination">
-    <div><</div>
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>></div>
-        </div>
-    </td>
-          </tr>
-      </tfoot>
-      </table> -->
-      
-    
+      <input type="search" id="search-by-name" class="data-handler" name="search" placeholder="Search for...">
+      <!-- <div class="data-handler"><div class="separator"><img src="images/socket.svg" alt="socket"></div></div>       -->
+      <select id="sort-by" class="data-handler" name="sort by" required>
+        <option value="">Sort by</option>
+        <option value="name">Name</option>
+        <option value="user-credentials">User credentials</option>
+        <option value="last-transcation">Last Transcation</option>
+        <option value="status">Status</option>
+        <option value="end-date">End date </option>
+        <option value="total-used">Total Used</option>
+      </select>
+      <span id="choose-sort-direction" class="shift-arrow"></span>
       <table class="transaction-table"> 
         <thead>
           <tr class="filter">
@@ -160,17 +53,7 @@
         </thead>
         <tbody id="table-content"> 
         </tbody> 
-          <input type="search" id="search-by-name" class="data-handler" name="search" placeholder="Search for...">
-          <!-- <div class="data-handler"><div class="separator"><img src="images/socket.svg" alt="socket"></div></div>       -->
-          <select id="sort-by" class="data-handler" name="sort by" required>
-            <option value="">Sort by</option>
-            <option value="name">Name</option>
-            <option value="user-credentials">User credentials</option>
-            <option value="last-transcation">Last Transcation</option>
-            <option value="status">Status</option>
-            <option value="end-date">End date </option>
-            <option value="total-used">Total Used</option>
-          </select>
+          
         <tfoot>
           <tr>
             <td scope="row" colspan="10">

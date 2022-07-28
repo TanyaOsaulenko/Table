@@ -1,12 +1,26 @@
 const tableContent = document.getElementById("table-content");
 const searchByName = document.getElementById("search-by-name");
 const sortBy = document.getElementById("sort-by");
+const chooseSortDirection = document.getElementById("choose-sort-direction");
+let isReverseSorting = false;
+
+
+
+function changeSortingDirection() { //TODO change function name
+    chooseSortDirection.classList.toggle("change-sort-direction"); //TODO change class name
+    isReverseSorting = !isReverseSorting; //TODO need to undarstand how it works
+};
+
+chooseSortDirection.addEventListener("click", changeSortingDirection);
+
+
 
 function displayTable(tableToDisplay) {
+    tableContent.innerHTML = ``;
     for(let i=0; i < tableToDisplay.length; i++) {
         tableContent.innerHTML += `<tr>
-            <td scope="rowgroup" rowspan="2"><input type="checkbox" id="1" name="1"></td>
-            <td scope="rowgroup" rowspan="2"><img src=${tableToDisplay[i].logo} alt="figma"></td>
+            <td scope="rowgroup" rowspan="2"><input type="checkbox"></td>
+            <td scope="rowgroup" rowspan="2"><img src=${tableToDisplay[i].logo} alt="${tableToDisplay[i].trasactionName.name}"></td>
             <td>${tableToDisplay[i].trasactionName.name}</td>
             <td>${tableToDisplay[i].cardInfo.cardType}</td>
             <td>${tableToDisplay[i].userCredentials.user}</td>
@@ -91,9 +105,22 @@ function sortByTotalUsed(a, b) {
 };
 
 function sortTable(sortingFieldMethod){
-    tableContent.innerHTML = ``;
-    transactions.sort(sortingFieldMethod);
-    displayTable(transactions); 
+    let sortedTable = transactions.sort(sortingFieldMethod);
+    if(isReverseSorting) {
+        sortedTable = sortedTable.reverse();
+    };
+
+
+
+    // transactions.sort(sortingFieldMethod);
+    // console.log(isReverseSorting)
+    // if(isReverseSorting) {
+    //     transactions.reverse();
+    // }; 
+
+
+
+    displayTable(sortedTable); 
 };
 
 function sortTableByItems() {
@@ -122,15 +149,8 @@ function sortTableByItems() {
 sortBy.addEventListener("change", sortTableByItems); 
 
 function searchItemsByName() {
-    tableContent.innerHTML = ``; // TODO refactor this this line
     const filteredTransactions = transactions.filter(item => item.trasactionName.name.toLowerCase().includes(searchByName.value.toLowerCase()));
-    displayTable(filteredTransactions)
-    console.log(filteredTransactions);
-    console.log(searchByName.value);
+    displayTable(filteredTransactions);
 };
-
-
-
-
 
 searchByName.addEventListener("input", searchItemsByName); 
