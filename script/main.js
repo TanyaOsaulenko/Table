@@ -6,9 +6,9 @@ let isReverseSorting = false;
 
 
 
-function changeSortingDirection() { //TODO change function name
-    chooseSortDirection.classList.toggle("change-sort-direction"); //TODO change class name
-    isReverseSorting = !isReverseSorting; //TODO need to undarstand how it works
+function changeSortingDirection() { 
+    chooseSortDirection.classList.toggle("change-sort-direction"); 
+    isReverseSorting = !isReverseSorting; 
 };
 
 chooseSortDirection.addEventListener("click", changeSortingDirection);
@@ -109,16 +109,6 @@ function sortTable(sortingFieldMethod){
     if(isReverseSorting) {
         sortedTable = sortedTable.reverse();
     };
-
-
-
-    // transactions.sort(sortingFieldMethod);
-    // console.log(isReverseSorting)
-    // if(isReverseSorting) {
-    //     transactions.reverse();
-    // }; 
-
-
 
     displayTable(sortedTable); 
 };
